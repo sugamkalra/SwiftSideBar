@@ -14,6 +14,7 @@
 		15DBCF9D1BA8154E006E2057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DBCF9C1BA8154E006E2057 /* Images.xcassets */; };
 		15DBCFA01BA8154E006E2057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DBCF9E1BA8154E006E2057 /* LaunchScreen.xib */; };
 		15DBCFAC1BA8154E006E2057 /* SwiftySideBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBCFAB1BA8154E006E2057 /* SwiftySideBarTests.swift */; };
+		15DBCFB91BA81627006E2057 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DBCFB81BA81627006E2057 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		15DBCFA51BA8154E006E2057 /* SwiftySideBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySideBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DBCFAA1BA8154E006E2057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DBCFAB1BA8154E006E2057 /* SwiftySideBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySideBarTests.swift; sourceTree = "<group>"; };
+		15DBCFB61BA81626006E2057 /* SwiftySideBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftySideBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		15DBCFB71BA81627006E2057 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		15DBCFB81BA81627006E2057 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		15DBCF8F1BA8154E006E2057 /* SwiftySideBar */ = {
 			isa = PBXGroup;
 			children = (
+				15DBCFB51BA81602006E2057 /* Utils */,
 				15DBCF921BA8154E006E2057 /* AppDelegate.swift */,
 				15DBCF971BA8154E006E2057 /* ViewController.swift */,
 				15DBCF991BA8154E006E2057 /* Main.storyboard */,
@@ -113,6 +118,16 @@
 				15DBCFAA1BA8154E006E2057 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15DBCFB51BA81602006E2057 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				15DBCFB71BA81627006E2057 /* SWRevealViewController.h */,
+				15DBCFB81BA81627006E2057 /* SWRevealViewController.m */,
+				15DBCFB61BA81626006E2057 /* SwiftySideBar-Bridging-Header.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +174,8 @@
 		15DBCF851BA8154E006E2057 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Sugam Kalra";
 				TargetAttributes = {
@@ -218,6 +235,7 @@
 				15DBCF981BA8154E006E2057 /* ViewController.swift in Sources */,
 				15DBCF961BA8154E006E2057 /* SwiftySideBar.xcdatamodeld in Sources */,
 				15DBCF931BA8154E006E2057 /* AppDelegate.swift in Sources */,
+				15DBCFB91BA81627006E2057 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +362,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftySideBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftySideBar/SwiftySideBar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -354,9 +375,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftySideBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftySideBar/SwiftySideBar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -413,6 +436,7 @@
 				15DBCFB11BA8154E006E2057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15DBCFB21BA8154E006E2057 /* Build configuration list for PBXNativeTarget "SwiftySideBarTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +445,7 @@
 				15DBCFB41BA8154E006E2057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
